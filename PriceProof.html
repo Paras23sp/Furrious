@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PriceProof – Compare the true cost</title>
+
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><i>✓</i>PriceProof</div><span>Prices, delivery, returns and warranty in one view</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>The lowest price isn’t always the cheapest.</h1>
+        <p>Search a product and see the true cost from every store after discounts and delivery, plus return and
+          warranty terms.</p>
+        <form class="search" id="sf" role="search"><input id="q" type="search"
+            placeholder="Search headphones, laptop, sneakers…" aria-label="Search products"><button
+            type="submit">Search</button></form>
+      </div>
+      <div class="receipt" aria-label="Example of a true cost calculation">
+        <h3>Aero ANC Headphones · BazaarBay</h3>
+        <div class="rl"><span>Sticker price</span><span>₹6,299</span></div>
+        <div class="rl"><span>Discount (30%)</span><span class="neg">−₹1,890</span></div>
+        <div class="rl"><span>Delivery</span><span>₹49</span></div>
+        <div class="rl tot"><span>True cost</span><span>₹4,458</span></div>
+        <div class="stamp">BEST DEAL</div>
+      </div>
+    </section>
+
+    <div class="tools">
+      <div class="chips" id="chips"></div>
+      <label>Sort <select id="sort">
+          <option value="cost">Lowest true cost</option>
+          <option value="war">Longest warranty</option>
+          <option value="ret">Longest returns</option>
+        </select></label>
+    </div>
+    <main class="grid" id="grid" aria-live="polite"></main>
+    <footer>Demo data for prototype purposes. Live store prices will connect through shopping APIs in a future version.
+    </footer>
+  </div>
+
+  <dialog id="dlg" aria-label="Offer comparison"></dialog>
+  <div class="toast" id="toast" role="status"></div>
+
+ <script src="script.js" ></script>
+</body>
+
+</html>
